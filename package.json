@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/LouisYS-Carleton/google-books/issues"
   },
-  "homepage": "https://github.com/LouisYS-Carleton/google-books#readme"
+  "homepage": "https://github.com/LouisYS-Carleton/google-books#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.12"
+  }
 }
