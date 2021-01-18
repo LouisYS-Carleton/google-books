@@ -1,0 +1,19 @@
+{
+  "name": "google-books",
+  "version": "1.0.0",
+  "description": "A google books app for sorting and searching",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LouisYS-Carleton/google-books.git"
+  },
+  "author": "Louis YS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LouisYS-Carleton/google-books/issues"
+  },
+  "homepage": "https://github.com/LouisYS-Carleton/google-books#readme"
+}
