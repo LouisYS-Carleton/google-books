@@ -1,23 +1,27 @@
 {
-  "name": "google-books",
-  "version": "1.0.0",
-  "description": "A google books app for sorting and searching",
-  "main": "index.js",
+  "name": "mern",
+  "version": "1.2.0",
+  "description": "Mern Demo",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LouisYS-Carleton/google-books.git"
-  },
-  "author": "Louis YS",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LouisYS-Carleton/google-books/issues"
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.7"
   },
-  "homepage": "https://github.com/LouisYS-Carleton/google-books#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.11.12"
+    "if-env": "^1.0.4",
+    "mongoose": "^5.11.12",
+    "react-router-dom": "^5.2.0"
   }
 }
