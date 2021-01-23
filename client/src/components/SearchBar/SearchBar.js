@@ -30,10 +30,11 @@ function SearchBar() {
             id="inputQuery"
             placeholder="Enter a keyword"
             onChange={(event) => setSearch(event.target.value)}
+            style={{ marginBottom: "8px" }}
             // ref={inputReference}
           ></input>
           <button type="submit" className="btn btn-primary mb-2">
-            <i className="fa fa-search"></i>
+            <i className="fa fa-search">Search</i>
           </button>
         </div>
       </form>
@@ -41,7 +42,7 @@ function SearchBar() {
         {results.map((book) => (
           <Result
             title={book.volumeInfo.title}
-            author={book.volumeInfo.authors.join(", ")}
+            authors={book.volumeInfo.authors}
             description={book.volumeInfo.description}
             image={
               book.volumeInfo.imageLinks

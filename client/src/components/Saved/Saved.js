@@ -27,19 +27,32 @@ function Saved({ title, image, link, authors, description }) {
     <div>
       {results.map((currentResults) => {
         return (
-          <div>
+          <div
+            style={{
+              border: "solid black thin",
+              margin: "10px",
+              padding: "20px",
+              backgroundColor: "rgb(211 211 211)",
+            }}
+          >
             <h3>{currentResults.title}</h3>
             <img src={currentResults.image} alt={currentResults.title} />
-            <button>
-              <a href={currentResults.link} target="_blank" rel="noreferrer">
-                View Book
-              </a>
-            </button>
-            <button onClick={() => handleBookDelete(currentResults._id)}>
-              Delete Book
-            </button>
-            <p>Authors: {currentResults.authors}</p>
-            <p>Description: {currentResults.description}</p>
+            <div style={{ margin: "10px", marginLeft: "0px" }}>
+              <button>
+                <a href={currentResults.link} target="_blank" rel="noreferrer">
+                  View Book
+                </a>
+              </button>
+              <button onClick={() => handleBookDelete(currentResults._id)}>
+                Delete Book
+              </button>
+            </div>
+            <p>
+              <h5>Authors:</h5> {currentResults.authors}
+            </p>
+            <p>
+              <h5>Description:</h5> {currentResults.description}
+            </p>
           </div>
         );
       })}
