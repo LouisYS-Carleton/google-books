@@ -4,11 +4,10 @@ An app to help view, save, and search the books from the google books API. See a
 
 ## Deployed App on Heroku
 
-https://immense-dawn-92554.herokuapp.com/
+https://vast-basin-35066.herokuapp.com/
 
-<img src="./README_imgs/home.png" alt="Home page">
-<img src="./README_imgs/new.png" alt="Add Workout page">
-<img src="./README_imgs/stats.png" alt="Stats page">
+<img src="./client/public/Assets/ss1.png" alt="Saved">
+<img src="./client/public/Assets/ss2.png" alt="Search">
 
 ## Table of Contents:
 
@@ -37,7 +36,7 @@ This project is open source, so please feel free to use it in any way you see fi
 
 ## Tests:
 
-Test the workout tracker application once before creating final copy, just to ensure everything is to your liking.
+Test the Google Books Search application once before creating final copy, just to ensure everything is to your liking.
 
 ## Questions:
 
