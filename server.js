@@ -25,15 +25,16 @@ mongoose.connect(
 );
 
 // Define API routes here
-// app.get('/books', (req, res) => {
-//   Book.find({})
-//     .then((dbBook) => {
-//       res.json(dbBook)
-//     })
-//     .catch((err) => {
-//       res.status(400).json(err)
-//     })
-// })
+app.get("/books", (req, res) => {
+  Book.find({})
+    .then((dbBook) => {
+      res.json(dbBook);
+      console.log(dbBook);
+    })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
+});
 
 app.post("/books", (req, res) => {
   console.log(req.body);
@@ -47,7 +48,17 @@ app.post("/books", (req, res) => {
 });
 
 app.delete("/books/:id", (req, res) => {
-  const bookId = ObjectId(req.params.id);
+  const bookId = req.params.id;
+  Book.findByIdAndDelete(bookId)
+    .then((deleteBook) => {
+      res.status(200).json("Successfully deleted.");
+      console.log("Deleting book");
+      console.log(bookId);
+      console.log(deleteBook);
+    })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
 });
 
 // Send every other request to the React app
